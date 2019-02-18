@@ -14,7 +14,7 @@
       "type": "keyword",
       "name": "Demo",
       "description": "Demo extension",
-      "default_value": "dm"
+      "default_value": "hello"
     }
   ]
 }

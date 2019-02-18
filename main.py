@@ -5,6 +5,8 @@ from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 
+from youdao import translation
+
 
 class DemoExtension(Extension):
 
@@ -16,11 +18,13 @@ class DemoExtension(Extension):
 class KeywordQueryEventListener(EventListener):
 
     def on_event(self, event, extension):
+        query = event.get_argument() or ""
         items = []
-        for i in range(5):
-            items.append(ExtensionResultItem(icon='images/icon.png',
-                                             name='Item %s' % i,
-                                             description='Item description %s' % i,
+        results = translation(query)
+        for item in results:
+            items.append(ExtensionResultItem(icon=item['icon'],
+                                             name=item['title'],
+                                             description=item['subtitle'],
                                              on_enter=HideWindowAction()))
 
         return RenderResultListAction(items)
