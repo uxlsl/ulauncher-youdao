@@ -12,9 +12,9 @@
     {
       "id": "youdao_kw",
       "type": "keyword",
-      "name": "youdao",
+      "name": "yd",
       "description": "Youdao extension",
-      "default_value": "hello"
+      "default_value": ""
     }
   ]
 }
