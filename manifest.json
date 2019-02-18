@@ -14,7 +14,7 @@
       "type": "keyword",
       "name": "yd",
       "description": "Youdao extension",
-      "default_value": ""
+      "default_value": "yd"
     }
   ]
 }
