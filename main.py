@@ -3,7 +3,7 @@ from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
-from ulauncher.api.shared.action import CopyToClipboardAction
+from ulauncher.api.shared.action.CopyToClipboardAction import CopyToClipboardAction
 
 from youdao import translation
 
