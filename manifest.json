@@ -1,19 +1,19 @@
 {
   "manifest_version": "2",
   "api_version": "1",
-  "name": "Demo extension",
+  "name": "youdao extension",
   "description": "Extension Description",
-  "developer_name": "John Doe",
+  "developer_name": "uxlsl",
   "icon": "images/icon.png",
   "options": {
     "query_debounce": 0.1
   },
   "preferences": [
     {
-      "id": "demo_kw",
+      "id": "youdao_kw",
       "type": "keyword",
-      "name": "Demo",
-      "description": "Demo extension",
+      "name": "youdao",
+      "description": "Youdao extension",
       "default_value": "hello"
     }
   ]
