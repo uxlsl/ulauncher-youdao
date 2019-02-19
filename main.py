@@ -2,6 +2,7 @@ from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
+from ulauncher.api.shared.action.CopyToClipboardAction import CopyToClipboardAction
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 
@@ -25,7 +26,7 @@ class KeywordQueryEventListener(EventListener):
             items.append(ExtensionResultItem(icon=item['icon'],
                                              name=item['title'],
                                              description=item['subtitle'],
-                                             on_enter=HideWindowAction()))
+                                             on_enter=CopyToClipboardAction(item['title'])))
 
         return RenderResultListAction(items)
 
