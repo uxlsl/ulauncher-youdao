@@ -141,12 +141,12 @@ def fetch_translation(query):
 def save_history_data(query, title, arg, ICON_DEFAULT):
     jsonData = '{"title": "%s", "subtitle": "%s", "arg": "%s", \
         "icon": "%s"}\n' % (query, title, arg, ICON_DEFAULT)
-    with open('history.log', 'a') as file:
+    with open('.ulauncher_youdao_history.log', 'a') as file:
         file.write(jsonData)
 
 
 def get_history_data():
-    with open('history.log', 'r') as file:
+    with open('.ulauncher_youdao_history.log', 'r') as file:
         for line in file.readlines()[-1:-10:-1]:
             line = json.loads(line)
             wf.add_item(
